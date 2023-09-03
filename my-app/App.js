@@ -9,13 +9,23 @@ import DashboardScreen from './src/screens/DashboardScreen';
 
 const Stack = createStackNavigator(); // This was missing
 
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+    </View>
+  );
+}
+
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Profile" component={ProfileScreen} />
-      <Stack.Screen name="Duel" component={DuelScreen} />
-      <Stack.Screen name="Dashboard" component={DashboardScreen} />
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="Duel" component={DuelScreen} />
+        <Stack.Screen name="Dashboard" component={DashboardScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
@@ -28,11 +38,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screesn</Text>
-    </View>
-  );
-}
