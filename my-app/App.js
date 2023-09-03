@@ -3,21 +3,11 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './src/screens/HomeScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import DuelScreen from './src/screens/DuelScreen';
 import DashboardScreen from './src/screens/DashboardScreen';
 
-
 const Stack = createStackNavigator(); // This was missing
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
 
 export default function App() {
   return (
@@ -38,3 +28,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screesn</Text>
+    </View>
+  );
+}
